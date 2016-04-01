@@ -29,7 +29,6 @@ func main() {
     ** Simulation short bursty Requests
     */
     burstyLimiter := make(chan time.Time, 3)
-    after := make(chan bool)
 
     //allow 3 request to bursty requests
     for i := 0; i < 3; i++ {
@@ -45,7 +44,7 @@ func main() {
 
     /*
     ** initialization 5 Requests
-    */``
+    */
     burstyRequests := make(chan int, 5)
     for i := 1; i <= 5; i++ {
         burstyRequests <- i
@@ -53,6 +52,6 @@ func main() {
     close(burstyRequests)
     for req := range burstyRequests {
         <-burstyLimiter
-        F.Println("[*]Requests", req, time.Now())
+        F.Println("[-->]Requests", req, time.Now())
     }
 }
