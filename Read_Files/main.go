@@ -76,6 +76,8 @@ func main() {
     F.Printf("[--Func--]reader.Peek(5).\n")
     F.Printf("[-->]Bytes: %d\n", 5)
     F.Printf("[-->]Data: %s\n", string(b4))
+
+    f.Close()
 }
 
 
