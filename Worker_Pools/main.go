@@ -41,5 +41,5 @@ func main() {
         }
     }
 
-    F.Println("[*]All jobs need 18 second to solved, but only spend 6 second, because we initialization 3 \"worker\" to working.")
+    F.Println("[*]All jobs need 18 second to finish, but only spend 6 second to solved it, because we initialization 3 \"worker\" to working.")
 }
